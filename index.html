@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGU Fast Food</title>
+    <link rel="stylesheet" href="./assets/CSS/index.css">
+    <link rel="stylesheet" href="./assets/CSS/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="main">
+        <!-- begin bandroll  -->
+        <div id="bandroll">
+            <div id="header-info">
+                <div class="info-contact">
+                    <i class="info-icon far fa-envelope"></i>
+                    <i class="info-icon fas fa-phone-alt"></i>
+                    <p>Liên hệ với chúng tôi</p>
+                </div>
+                <a href="#" id="log-in" class="login">
+                    <i class="loginIcon far fa-user"></i>
+                    <p id="user-name"></p>
+                    <ul id="user-menu">
+                        <li class="user-info">Xem hồ sơ</li>
+                        <li class="logout">Đăng xuất <i class="fas fa-sign-out-alt"></i></li>
+                    </ul>
+                </a>
+            </div>
+            <div class="bandroll-content">
+                <div class="logo">
+                    <img src="./assets/IMG/IndexIMG/logo.png" alt="">
+                </div>
+                <div class="bandroll-search">
+                    <input class="input-search"  type="text" placeholder="Tìm kiếm sản phẩm" onchange="searchData1()">
+                    <i class="search-icon fas fa-search" onclick="search1()"></i>
+                </div>
+                <div class="cart">
+                    <i class="cart-icon fas fa-shopping-cart" onclick="upBuyItemsToLocalStorage()"></i>
+                </div>
+            </div>
+            <!-- header  -->
+            <div id="header">
+                <p id="mobile-menu"><i class="fas fa-bars"></i> DANH MỤC</p>
+                <ul id="menu" class="nav">
+                    <li id="home" onclick="output(this)"><a href="#">HOME</a></li>
+                    <li id="food" onclick="output(this)"><a href="#">FOOD</a></li>
+                    <li id="drink" onclick="output(this)"><a href="#">DRINK</a></li>
+                </ul>
+                <ul id="contact" class="nav"> 
+                    <input id="header-search" type="text" placeholder="search" onchange="searchData()">
+                    <li id="search-icon"><i class="search-icon fas fa-search" onclick="search()"></i></li>
+                    <li><i class="login-icon far fa-user"></i></li>
+                    <li><i class="cart-icon fas fa-shopping-cart" onclick="upBuyItemsToLocalStorage()"></i></li>
+                </ul>
+            </div>
+        </div>
+     
+        </div>
+        <!-- begin slider  -->
+        <div id="slider">
+            <img id="slider-item"  src="./assets/IMG/IndexIMG/slider/slider1.png"  >
+            <i class="arrow-icon left-arrow-icon fas fa-chevron-left" onclick="prev()"></i>
+            <i class="arrow-icon right-arrow-icon fas fa-chevron-right" onclick="next()"></i>           
+        </div>
+        <!-- phân loại sản phẩm  -->
+        <div id="select-wrap">
+            <div id="select">
+                <div id="select-title">
+                    <p>Phân loại sản phẩm theo giá <i class="fas fa-chevron-down"></i></p>
+                </div>
+                <ul id="select-body">
+                    <li id="up">Từ thấp đến cao <i class="fas fa-long-arrow-alt-up"></i></li>
+                    <li id="down">Từ cao đến thấp <i class="fas fa-long-arrow-alt-down"></i></li>
+                    <li id="custom">
+                        Từ <input type="text" class="begin"> đến <input type="text" class="end">
+                        <i class="go fas fa-long-arrow-alt-right"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+     
+
+        <!-- begin content  -->
+        <div id="wrap">
+            <div id="content">
+
+            </div>
+            <div id="page"></div>
+        </div>
+   
+       
+        <!-- begin footer  -->
+        <div id="footer">
+            <div class="logo-footer">
+                <img src="./assets/IMG/IndexIMG/logo.png" alt="SGU Fast Food">
+            </div>
+            <div class="support-footer">
+                <h2>Hỗ trợ mua hàng</h2>
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#food">FOOD</a></li>
+                    <li><a href="#drink">DRINK</a></li>
+                </ul>
+            </div>
+            <div class="author">
+                <h2>Thành viên</h2>
+                <ul>
+                    <li>Mai Thanh An</li>
+                    <li>Phạm Lê Huyền Trang</li>
+                    <li>Huỳnh Thị Phương Vy</li>
+                    <li>Võ Kim Uyên</li>
+                </ul>
+            </div>
+            <div class="info-footer">
+                <h2>Hotline hỗ trợ</h2>
+                <h2>+00 151515</h2>
+                <h2>Theo dõi chúng tôi</h2>
+                <div class="info-icon-footer">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-facebook-messenger"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter-square"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="./assets/JS/index.js"></script>
+</body>
+</html>

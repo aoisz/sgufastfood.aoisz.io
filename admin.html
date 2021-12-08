@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGU Fast-food</title>
+    <link rel="stylesheet" href="./assets/CSS/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <div id="product" class="nav-item">
+                <i class="fas fa-shopping-cart"></i>
+                <a class="item_list_tittle">Quản Lý Sản Phẩm</a>
+            </div>
+            <div id="account" class="nav-item">
+                <i class="fas fa-user"></i>
+                <a class="item_list_tittle">Quản Lý Tài Khoản</a>
+            </div>
+            <div id="cart" class="nav-item">
+                <i class="fas fa-wallet"></i>
+                <a id="statictic" class="item_list_tittle">Quản lý mua bán</a>
+            </div>
+            <a id="log-out" class="nav-item"><i class="fas fa-sign-out-alt"></i></a>
+        </div>
+        
+        <div id="body">
+            <div id="item_place">
+                
+            </div>
+            <button id="add_btn">Thêm</button>
+        </div>
+        <!-- Modals-->
+        <div id="add-products_modal_container" class="modal-container">
+            <div id="modal_add-products">
+                <div class="modal_header">
+                    <div class="modal_title">Nhập thông tin sản phẩm</div>
+                    <i id="modal_add-product_out" class="modal_out far fa-times-circle"></i>
+                </div>
+                <div id="product-input">
+                    <div class="input_item">
+                        <label for="product_name">Tên sản phẩm:</label>
+                        <input type="text" name="product_name" id="product_name">
+                    </div>
+                    <div class="input_item">
+                        <label for="product_price">Giá tiền:</label>
+                        <input type="text" name="product_price" id="product_price">
+                    </div>
+                    <div class="input_item">
+                        <label for="product_img">Ảnh:</label>
+                        <input type="text" name="product_img" id="product_img">
+                    </div>
+                    <div id="product-type" class="input_item">
+                        <input value="food" type="radio" name="product-type" class="radio">
+                        <label class="radio-title" for="">Thức ăn</label>
+                        <input value="drink" type="radio" name="product-type" class="radio">
+                        <label class="radio-title" for="">Thức uống</label>
+                    </div>
+                </div>
+                <div id="add-product_modal_btn">
+                    <i id="add-product_modal_done" class="modal_btn fas fa-check"></i>
+                    <i id="add-product_modal_cancel" class="modal_btn fas fa-times"></i>
+                </div>
+            </div>
+        </div>
+
+        <div id="add-account_modal_container" class="modal-container">
+            <div id="modal_add-account">
+                <div class="modal_header">
+                    <div class="modal_title">Nhập thông tin tài khoản</div>
+                    <i id="modal_add-account_out" class="modal_out far fa-times-circle"></i>
+                </div>
+                <div id="account-input">
+                    <div class="input_item">
+                        <label for="account_name">Tên:</label>
+                        <input type="text" name="account_name" id="account_name">
+                    </div>
+                    <div class="input_item">
+                        <label for="account_user-name">Tên tài khoản:</label>
+                        <input type="text" name="account_user-name" id="account_user-name">
+                    </div>
+                    <div class="input_item">
+                        <label for="account_password">Mật khẩu:</label>
+                        <input type="text" name="account_password" id="account_password">
+                    </div>
+                    <div class="input_item">
+                        <label for="account_password">Phone:</label>
+                        <input type="text" name="account_password" id="account_phone">
+                    </div>
+                    <div class="input_item">
+                        <label for="account_password">Email:</label>
+                        <input type="text" name="account_password" id="account_email">
+                    </div>
+                    <div class="input_item">
+                        <label for="">Loại tài khoản:</label>
+                        <input value="admin" type="radio" name="account_type" class="radio">
+                        <label class="radio-title" for="">Admin</label>
+                        <input value="user" type="radio" name="account_type" class="radio">
+                        <label class="radio-title" for="">User</label>
+                    </div>
+                </div>
+                <div id="add-account_modal_btn">
+                    <i id="add-account_modal_done" class="modal_btn fas fa-check"></i>
+                    <div id="add-account_modal_cancel" class="modal_btn">Cancel</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="remove-item_modal_container" class="modal-container">
+            <div id="modal_remove_element">
+                <div class="modal_header">
+                    <div class="modal_title">Chắc chắn xóa ?</div>
+                    <i id="modal_remover_out" class="modal_out far fa-times-circle"></i>
+                </div>
+                <div id="remove-element_modal_btn">
+                    <i id="remove-item_modal_accept" class="modal_btn fas fa-check"></i>
+                    <div id="remove-element_modal_cancel" class="modal_btn">Cancel</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="manage_modal_container" class="modal-container">
+            <div id="modal_manage_element">
+                <div class="modal_header">
+                    <div class="modal_title">Thông tin hóa đơn</div>
+                    <i id="modal_manage_out" onclick="closeManagerModal()" class="modal_out far fa-times-circle"></i>
+                </div>
+                <div id="manager-content" class="modal_content"></div>
+            </div>
+        </div>
+        <!---->
+    </div>
+</body>
+<script src="./assets/JS/admin.js"></script>
+</html>

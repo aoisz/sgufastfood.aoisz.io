@@ -1,0 +1,361 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Helvetica, sans-serif;
+}
+
+.font-bold {
+    font-weight: 600;
+}
+
+th {
+    font-weight: 300;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    line-height: 46px;
+    font-size: 18px;
+    background-color: rgba(116, 192, 35, 0.7);
+    display: flex;
+    text-transform: uppercase;
+    font-weight: 550;
+    position: relative;
+    color: #fff;
+}
+
+.nav-item {
+    padding: 0 12px;
+    cursor: pointer;
+}
+
+#header-tittle {
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+#header-icon {
+}
+
+#header-icon,
+#header-tittle {
+}
+
+.nav-item:hover {
+    /* color: #fff; */
+    background-color: #A2CD5A;
+}
+
+.item_list_tittle {
+    cursor: pointer;
+    color: #fff;
+}
+
+#log-out {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 16px;
+}
+
+#log-out:hover {
+    background-color: #ff0000;
+}
+
+#body {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#add_btn {
+    margin-top: 12px;
+    margin-right: 620px;
+    padding: 0 16px;
+    line-height: 28px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 36px;
+}
+
+#add_btn:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+#item_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#item_list .item {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #ccc;
+}
+
+#item_list .item:first-child {
+    text-transform: uppercase;
+    margin-top: 36px;
+    min-width: 180px;
+}
+
+#item_list .item > td {
+    padding-left: 12px;
+    line-height: 46px;
+}
+
+.item-member {
+    min-width: 160px;
+    max-width: 160px;
+    border-right: 1px solid #ccc;
+}
+
+#item_list .item .item-member {
+    display: flex;
+    justify-content: center;
+}
+
+.product-img {
+    max-width: 120px;
+    padding: 4px 0;
+}
+
+.del_btn {
+    margin-left: 24px;
+    background-color: #ff3434;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 12px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.del_btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.edit_btn {
+    background-color: #ccc;
+    padding: 4px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #000;
+}
+
+.edit_btn:hover {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+.modal-container {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(224, 219, 219, 0.521);
+    display: none;
+}
+
+#modal_remove_element,
+#modal_add-products,
+#modal_add-account {
+    position: relative;
+    max-width: 260px;
+    flex: 1;
+    text-align: center;
+}
+
+.modal_header {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(116, 192, 35, 0.9);
+    width: 100%;
+    position: relative;
+}
+
+.modal_title {
+    line-height: 46px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+}
+
+.modal_out {
+    position: absolute;
+    line-height: 46px !important;
+    padding: 0 12px;
+    cursor: pointer;
+    font-size: 26px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    color: #fff;
+}
+
+.modal_out:hover {
+    opacity: 0.7;
+}
+
+#add-product_modal_btn,
+#remove-element_modal_btn,
+#add-account_modal_btn,
+#manage-modal_btn {
+    display: flex;
+}
+
+.modal_btn {
+    line-height: 46px !important;
+    cursor: pointer;
+    flex: 1;
+    background-color: #ccc;
+}
+
+#remove-item_modal_accept:hover {
+    background-color: rgb(255, 0, 0);
+    color: #fff;
+}
+
+#add-product_modal_cancel,
+#add-account_modal_cancel {
+    line-height: 46px;
+    font-size: 28px;
+    background-color: #999;
+    color: #fff;
+}
+
+#add-product_modal_cancel:hover,
+#add-account_modal_cancel:hover {
+    background-color: #000;
+}
+
+#remove-element_modal_cancel:hover {
+    background-color: #999;
+}
+
+#add-products_modal_container {
+    display: none;
+}
+
+#modal_add-products {
+    position: relative;
+    max-width: 400px;
+}
+
+#modal_adder_out {
+}
+
+#product-input {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 4px 12px;
+}
+
+#product-type {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#product-type > input {
+    height: 24px;
+    max-width: 18px;
+    margin: 0 4px 2px 0;
+}
+
+#product-type > label {
+    line-height: inherit;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.input_item {
+    display: flex;
+    margin: 16px 0 16px;
+}
+
+.input_item > input {
+    flex: 1;
+    line-height: 30px;
+    padding-left: 4px;
+    margin-top: -8px;
+}
+
+.input_item > label {
+    min-width: 120px;
+    text-align: left;
+}
+
+#add-product_modal_done,
+#add-account_modal_done {
+    background-color: rgb(0, 255, 200);
+    color: #fff;
+    font-size: 28px;
+    line-height: 46px;
+}
+
+#add-product_modal_done:hover,
+#add-account_modal_done:hover {
+    opacity: 0.7;
+}
+
+#add-account_modal_container {
+    display: none;
+}
+
+#modal_add-account {
+    max-width: 480px;
+    background-color: #fff;
+}
+
+#account-input {
+    padding: 0 4px;
+}
+
+#account-input .radio {
+    height: 20px;
+    width: 20px;
+    padding-right: 2px;
+}
+
+#account-input .radio-title {
+}
+
+#manage_modal_container {
+    display: none;
+}
+
+#modal_manage_element {
+    min-width: 40%;
+}
+
+#manager-content {
+    min-height: 120px;
+    background-color: #fff;
+}

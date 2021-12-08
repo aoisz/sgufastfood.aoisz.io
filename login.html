@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./assets/CSS/login-page.css"/>
+    <title>SGU FAST FOOD</title>
+  </head>
+  <body>
+    <div id="header">
+      <div class="logo">
+        <img src="./assets/IMG/LoginIMG/logo.png" alt="SGUFastFood">
+      </div>
+      <h2 id="goIndex"><i class="fas fa-home"></i> Về trang chủ</h2>
+    </div>
+    
+    <!-- content  -->
+    <div id="content">
+        <!-- tạo bảng đăng ký tài khoản -->
+        <div class="signup-form form"> 
+              <div class="signup-header header-form">
+                  <h2>Đăng ký tài khoản</h2>
+              </div>
+              <div class="signup-body body-form">    
+                  <input id="name" type="text"  placeholder="Họ Tên" />         
+                  <input id="userName" type="text"  placeholder="Tên đăng nhập" />         
+                  <input id="passWord" type="password"  placeholder="Mật khẩu" />
+                  <input id="checkPass" type="password" placeholder="Nhập lại mật khẩu">         
+                  <input id="phoneNumber" type="text" placeholder="Điện thoại" />
+                  <input id="Mail" type="text"  placeholder="Địa chỉ mail" />
+                  <button id="btnInsert" onclick="saveData()" type="button" >Tạo tài khoản</button>
+                  <p class="message" onclick="switchForm()">Đã có tài khoản <a href="#">Đăng nhập</a></p>
+              </div>
+        </div> 
+        
+        <!-- tạo bảng đăng nhập -->
+        <div class="login-form form">  
+            <div class="login-header header-form"> 
+                <h2>Đăng nhập tài khoản</h2>
+            </div>
+            <div class="login-body body-form">
+                <input id="checkIpname" type="text" placeholder="Tên đăng nhập" />
+                <input id="checkIppass" type="password" placeholder="Mật khẩu" />
+                <button type="button" id="btnInto" onclick="checkLogin()">Đăng nhập</button>
+                <p class="message" onclick="switchForm()">Chưa có tài khoản <a href="#">Tạo tài khoản</a></p>
+            </div>
+        </div>
+    </div>  
+
+    <script src="./assets/JS/login-page.js"></script> 
+  </body>
+</html>

@@ -1,0 +1,104 @@
+/* pc  */
+@media (min-width: 64em) {
+
+}
+/* table && mobile  */
+@media (max-width: 63.9375em) { 
+    #slider .arrow-icon  {
+        font-size: 32px; 
+    }
+    #content {
+        width: 100%;
+    }
+    .buy-btn {
+        width: 100%;
+        height: 40px;   
+    }
+    .support-footer, .author {
+        display: none;
+    }
+    .logo-footer {
+        width: 40%;
+    }
+    .info-footer h2 {
+        font-size: 16px !important;
+    }
+    .modal-container {
+        width: 320px;
+        margin-top: 40px;
+    }
+    .modal-body {
+        flex-direction: column;
+    }
+    .modal-cost {
+        width: 100%;
+        border-left: none;
+        text-align: center;
+    }
+    .modal-img {
+        width: 100%;
+    }
+    .modal-img > img {
+        padding-top: 16px;
+        max-width: 220px;
+        max-height: 220px;
+    }
+
+}
+
+/* tablet  */
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+
+}
+
+/* mobile  */
+@media (max-width: 46.1875em) { 
+    .bandroll-content {
+        flex-direction: column;
+    }
+    .bandroll-content .logo {
+        margin-top: 110px;
+        /* border: 2px solid #000; */
+        width: 100%;
+        justify-content: center;
+    }
+    .logo img {
+        width: 50%;
+    }
+    .bandroll-search {
+        margin-top: 4px;
+        width: 80%;
+    }
+    .bandroll-search .input-search {
+        height: 32px;
+    }
+    .bandroll-search .search-icon {
+        padding: 6px 8px;
+        font-size: 20px;
+    }
+    .bandroll-content .cart {
+        display: none;
+    }
+    #header-info {
+        display: none;
+    }
+    #header {
+        position: fixed !important;
+        width: 100%;
+        margin: 0 0 !important;
+        justify-content: space-between !important;
+        z-index: 9;
+    }
+    #mobile-menu {
+        display: block;
+    }
+    #header #menu {
+        display: none;
+        background-color: #fff;
+        position: absolute;
+        top: 46px;
+    }
+    .nav a {
+        color: #000;
+    }
+}
